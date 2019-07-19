@@ -1,0 +1,53 @@
+.madln-ISLWrap {
+    &.madln-center-filter {
+        .madln-filter-row{
+            text-align: center;
+        }
+        
+    }
+    &.madln-wrap-input{
+       label {display: block;}
+    }
+    &.madln-pad-input {
+        input {
+            padding:5px;
+            border-radius: 5px;
+            margin: 5px 0px;
+        }
+    }
+    &.madln-constrain-width {
+        .madln-filter-row {
+            width:auto;
+            display: inline-block;
+        }
+    }
+    table.madln-instantFilterList{
+        border-collapse: collapse;
+        margin:8px 0px;
+        td, th {
+            text-align: left;
+            padding:5px;
+            margin:0px;
+        }
+    }
+
+    &.madln-showBorders {
+        table {
+            border:1px solid #333333;           
+            td, th {
+                border: 1px solid #333333;
+            }
+        }
+    }
+    &.madln-staggerColors {
+        table{
+            tr:nth-child(odd){
+                background-color:#CCCCCC;
+            }
+            tr:nth-child(even) {
+                background-color:#EEEEEE;
+            }           
+        }
+    }
+    
+}

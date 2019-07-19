@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Instant Filter List</title>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="description" content="Demo of Madlantern's Instant filter Table Script"/>
+        <!-- If you do not already have jquery loaded, the filter script will load jquery for you from the Google CDN. If you'd rather not use that version, please load another here above the instantFilterList-dist.js script reference.  -->
+        <script type="text/javascript" async="async" defer="defer" src="/madl-instant-filter/instantFilter-dist.js"></script> <!-- link to the instant filter javascript, that's all! -->
+        
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .demoTitle {
+                background-color: #1191b9;
+                color: #ffffff;
+                font-size: 17px;
+                font-weight: bold;
+                padding: 10px;
+                margin-top: 10px;
+                margin-bottom: 15px;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <!-- Your lists must be inside the body of the document please! You can add as many as you like -->
+
+
+        <div class="demoTitle">Filter a standard list:</div>
+        
+        <!-- NOTES:
+            Add the attribute data-filter-label="Your Custom Label Here" on your list to add a custom label to your filter input box. Remember, good ADA compliance is to make the label pretty descriptive about what is going to happen when your visitors use the input.
+            Add the attribute data-filter-input-length="" and fill its value with a number (integer) to set the length of your filter field. Max 100, min 1. Default is 22.
+            Add the attribute data-no-match-message="" and fill its value with a custom message for a custom message to display when there is no match for what was typed into the filter.
+            This example shows how adding links and nested lists works. That functionality will work whether or not you add a custom label. 
+        -->
+        <ul class="madln-instantFilterList" data-filter-label="Type to Filter Recipes" data-no-match-message="OOPS! No matches for that..." data-filter-style="madln-showBorders madln-staggerColors madln-pad-input">
+            <li>Apple Pie</li>
+            <li>Banana Muffins
+                <ul>
+                    <li>Banana Cream Muffins</li>
+                    <li>Banana Nut Muffins</li>
+                    <li>Bananas Foster Muffin Bites</li>
+                </ul>
+            </li> 
+            <li>Banana Cookies</li>
+            <li><a href="#">Caramel Crab Apple Blondies</a></li>
+            <li>Crab Cakes</li>
+            <li>Hotcakes</li>
+            <li>Hot Caramel Tea</li>
+            <li>Hot Coffee</li>
+            <li>Coffee Cake</li>
+        </ul>
+
+        &nbsp;
+
+        <div class="demoTitle">Filter a standard table:</div>
+
+        <!-- NOTES:
+            For the filter on a table, just add the class madln-instantFilterList 
+            The filter looks for the <tr>, <th> and <td> elements, so please use a straightforward data table for best effect.
+            Use data-filter-style="showBorders" to apply some simple formatting, if you want and are not going to use your own
+        -->
+
+        <table class="madln-instantFilterList" data-filter-label="Type to Filter Recipes" data-filter-style="madln-showBorders madln-staggerColors madln-pad-input">
+            <tr>
+                <th>Food Item</th>
+                <th>Main Ingredient</th>
+                <th>Source</th>
+            </tr>
+            <tr>
+                <td>Apple Pie</td>
+                <td>Apples</td>
+                <td>Mom's recipes</td>
+            </tr>
+            <tr>
+                <td><a href="#">Banana Bread</a></td>
+                <td>Bananas</td>
+                <td>Grandma's Farm Recipes</td>
+            </tr>
+            <tr>
+                <td>Coffee Cake</td>
+                <td>Espresso</td>
+                <td>Delicious Recipes Online</td>
+            </tr>
+            <tr>
+                <td>Caramel Banana Bites</td>
+                <td>Banana</td>
+                <td>The Big Coffee Table Recipe Book</td>
+            </tr>
+            <tr>
+                <td>Caramel Corn</td>
+                <td>Popcorn</td>
+                <td>Big Old Recipe Collection</td>
+            </tr>
+        </table>
+
+
+        
+
+    </body>
+
+</html>
